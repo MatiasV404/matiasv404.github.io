@@ -13,7 +13,17 @@
 </head>
 
 <header>
-    <video src="./assets/videos/Background.mp4" autoplay loop muted></video>
+    <div class="video-container">
+        <video 
+            autoplay 
+            muted 
+            loop 
+            playsinline 
+            preload="auto"
+            id="background-video">
+            <source src="./assets/videos/background.mp4" type="video/mp4">
+        </video>
+    </div>
     <img class="logo-header" src="assets/images/logo-white.png" alt="Logo"
         srcset>
     <div class="menu">
