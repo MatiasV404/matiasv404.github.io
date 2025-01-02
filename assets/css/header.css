@@ -49,6 +49,79 @@ header {
   z-index: 1;
 }
 
+/* MENU DE PRUEBA */
+/* Estilos para el menú de pantalla completa */
+.fullscreen-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.95);
+  z-index: 2000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s ease-in-out;
+}
+
+.fullscreen-menu.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.close-menu {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 2.5rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.close-menu:hover {
+  transform: rotate(90deg);
+}
+
+.menu-content {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-content ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+.menu-content ul li {
+  margin: 2rem 0;
+}
+
+.menu-content ul li a {
+  color: white;
+  text-decoration: none;
+  font-family: "Julius Sans One", serif;
+  font-size: 2.5rem;
+  transition: color 0.3s ease;
+}
+
+.menu-content ul li a:hover {
+  color: #888;
+}
+
+/* Ajustes responsive */
+@media screen and (max-width: 750px) {
+  .menu-content ul li a {
+      font-size: 2rem;
+  }
+}
+/* MENU DE PRUEBA */
+
 .menu {
   position: absolute;
   width: 50px;

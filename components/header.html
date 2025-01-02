@@ -14,11 +14,11 @@
 
 <header>
     <div class="video-container">
-        <video 
-            autoplay 
-            muted 
-            loop 
-            playsinline 
+        <video
+            autoplay
+            muted
+            loop
+            playsinline
             preload="auto"
             id="background-video">
             <source src="./assets/videos/Background.mp4" type="video/mp4">
@@ -26,9 +26,24 @@
     </div>
     <img class="logo-header" src="assets/images/logo-white.png" alt="Logo"
         srcset>
+    <!-- MENU DE PRUEBA -->
     <div class="menu">
-        <i class="bi bi-list"></i>
+        <i class="bi bi-list" id="menu-open"></i>
     </div>
+    <div class="fullscreen-menu">
+        <button class="close-menu">
+            <i class="bi bi-x-lg"></i>
+        </button>
+        <nav class="menu-content">
+            <ul>
+                <li><a href="#about">About me</a></li>
+                <li><a href="#experience">My Experience</a></li>
+                <li><a href="#contact">Contact me</a></li>
+            </ul>
+        </nav>
+    </div>
+    <!-- MENU DE PRUEBA -->
+
     <div class="header-content">
         <p id="career">Software Engineer Student</p>
         <span id="name">Matías Véliz</span>
