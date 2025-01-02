@@ -1,0 +1,27 @@
+footer {
+  background-color: #454545;
+  font-family: "Poiret One", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.5rem;
+  color: white;
+  text-align: center;
+}
+
+.copyright {
+    font-size: 1rem;
+}
+
+.footer-content,
+.social-media {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1rem;
+}
+
+.social-media {
+    flex-wrap: nowrap;
+}

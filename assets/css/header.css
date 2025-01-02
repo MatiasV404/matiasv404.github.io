@@ -1,0 +1,148 @@
+header {
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+  position: relative;
+  overflow: hidden;
+}
+
+header video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.header-content {
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  text-align: center;
+}
+
+.logo-header {
+  background-color: transparent;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.menu {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 10%;
+  right: 3%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  color: whitesmoke;
+  font-size: 3rem;
+  cursor: pointer;
+}
+
+.bi-chevron-compact-down {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  color: white;
+  font-size: 2rem;
+  transition: all 0.3s ease;
+}
+
+.scroll-down-button {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+.scroll-down-button:hover .bi-chevron-compact-down {
+  transform: translateX(-50%) translateY(5px);
+}
+
+#career {
+  font-family: "Poiret One", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2.5rem;
+}
+
+#name {
+  font-family: "Julius Sans One", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 5.5rem;
+}
+
+/* RESPONSIVE IPHONE 12 PRO */
+@media screen and (max-width: 750px) {
+  #career {
+    font-family: "Poiret One", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5rem;
+  }
+
+  #name {
+    font-family: "Julius Sans One", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3rem;
+  }
+
+  .logo-header {
+    background-color: transparent;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  }
+}
+
+/* RESPONSIVE IPHONE 12 PRO */
+@media screen and (min-width: 751px) and (max-width: 850px) {
+  #career {
+    font-family: "Poiret One", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2rem;
+  }
+
+  #name {
+    font-family: "Julius Sans One", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3rem;
+  }
+
+  .logo-header {
+    background-color: transparent;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  }
+}
