@@ -28,9 +28,8 @@ body {
 
 /* ABOUT ME */
 #main-container {
-  min-height: 100vh;
+  padding: 2rem;
   background-color: #f5f5f5;
-  padding: 80px 0;
 }
 
 #about-container {
@@ -45,9 +44,9 @@ body {
 #about-container p {
   font-family: "Roboto", sans-serif;
   color: #333 !important;
-  line-height: 1.8;
+  line-height: 1.5;
   font-size: 1.1rem;
-  margin-bottom: 2rem;
+  margin: 0;
 }
 
 #about-container p:last-child {
@@ -72,8 +71,8 @@ body {
 
 .about-content {
   display: flex;
-  gap: 3rem;
-  align-items: flex-start;
+  gap: 2rem;
+  align-items: center;
 }
 
 .profile-image-container {
@@ -95,6 +94,9 @@ body {
 
 .about-text {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 /* Animación de entrada */
@@ -168,4 +170,108 @@ body {
   border-radius: 15px;
   z-index: 1;
   pointer-events: none;
+}
+
+/* Estilos generales para las secciones */
+.section-container {
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+  font-family: 'Julius Sans One', serif;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Estilos para Projects */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.project-card {
+  padding: 1.5rem;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.tech-tag {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  margin: 0.3rem;
+  background-color: #f0f0f0;
+  border-radius: 15px;
+  font-size: 0.9rem;
+}
+
+/* Estilos para Skills */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.skill-card {
+  padding: 1.5rem;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Estilos para Certifications */
+.certifications-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.language-cert, .technical-cert {
+  padding: 1.5rem;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.technical-cert ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.technical-cert li {
+  margin-bottom: 0.5rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.technical-cert li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #333;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .section-title {
+      font-size: 2rem;
+  }
+  
+  .projects-grid,
+  .skills-grid,
+  .certifications-content {
+      grid-template-columns: 1fr;
+  }
 }

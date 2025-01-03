@@ -1,0 +1,68 @@
+{
+  "about": {
+    "title": "About Me",
+    "image": {
+      "src": "assets/images/mv-photo.jpg",
+      "alt": "Matías Véliz Igor"
+    },
+    "paragraphs": [
+      "I am a passionate software developer with a strong commitment to delivering high-quality solutions. My work combines creativity, problem-solving skills, and a focus on detail to tackle challenges in innovative ways."
+    ]
+  },
+  "projects": {
+    "title": "Projects",
+    "items": [
+      {
+        "name": "FitPlan Pro",
+        "description": "A mobile app designed to simplify product management by offering features like user registration, login, and real-time tracking of profits. Users can easily add, edit, or remove products while monitoring their business growth.",
+        "technologies": ["Ionic", "Angular", "Firebase"],
+        "achievements": "Enhanced user experience through an intuitive interface and streamlined workflows."
+      },
+      {
+        "name": "Sistema de alarma de incendios inteligente (S.A.I.I)",
+        "description": "A cutting-edge system under development that uses smoke and temperature sensors to detect fires and provide real-time notifications. The project integrates IoT devices to ensure efficient and timely responses to emergencies.",
+        "technologies": ["Raspberry Pi 3", "Python", "MongoDB"],
+        "achievements": "Advanced sensor integration and real-time alert mechanisms."
+      },
+      {
+        "name": "GalaxyMusic",
+        "description": "An e-commerce web application that incorporates a shopping cart, product integration through APIs, and advanced data analysis using neural networks to predict sales trends.",
+        "technologies": ["Python", "Django", "Firebase", "PostgreSQL"],
+        "achievements": "Improved decision-making with predictive analytics and seamless database integration."
+      }
+    ]
+  },
+  "skills": {
+    "title": "Skills",
+    "items": [
+      {
+        "name": "Discipline and Responsibility",
+        "description": "Recognized for consistently meeting deadlines and excelling academically. During the development of GalaxyMusic, I ensured timely delivery of features, balancing technical requirements with user needs."
+      },
+      {
+        "name": "Leadership and Teamwork",
+        "description": "Having led every academic project since the start of my studies, I foster a collaborative and productive environment. For instance, in the Smart Fire Alarm System (S.A.I.I), I coordinated the team to integrate hardware and software components seamlessly."
+      },
+      {
+        "name": "Continuous Learning and Motivation",
+        "description": "I am always eager to expand my knowledge and enhance my skills. This mindset drove the implementation of neural networks in GalaxyMusic, showcasing a proactive approach to solving complex problems."
+      }
+    ]
+  },
+  "certifications": {
+    "title": "Certifications",
+    "language": {
+      "title": "English Proficiency",
+      "level": "Intermediate-Advanced level"
+    },
+    "technical": {
+      "title": "Technical Certifications",
+      "items": [
+        "Data Model Analysis and Development",
+        "IT Requirements Analysis and Planning",
+        "Software Programming",
+        "Software Quality Assurance"
+      ]
+    }
+  }
+}
