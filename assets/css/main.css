@@ -1,3 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -31,6 +43,9 @@ body {
   padding: 2rem;
   background-color: #f5f5f5;
   min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
 }
 
 #about-container {
@@ -177,9 +192,11 @@ body {
 
 /* Estilos generales para las secciones */
 .section-container {
+  width: 100%;
   max-width: 1200px;
   margin: 4rem auto;
   padding: 2rem;
+  box-sizing: border-box;
   background-color: rgba(255, 255, 255, 0.95);
   border-radius: 15px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
@@ -194,9 +211,11 @@ body {
 
 /* Estilos para Projects */
 .projects-grid {
+  width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
+  padding: 0;
 }
 
 .project-card {
@@ -222,9 +241,11 @@ body {
 
 /* Estilos para Skills */
 .skills-grid {
+  width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
+  padding: 0;
 }
 
 .skill-card {
@@ -236,9 +257,11 @@ body {
 
 /* Estilos para Certifications */
 .certifications-content {
+  width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
+  padding: 0;
 }
 
 .language-cert, .technical-cert {
@@ -297,4 +320,22 @@ html {
 .menu-content a.active {
     color: #007bff; /* O el color que prefieras */
     font-weight: bold;
+}
+
+/* Asegurar que las imágenes sean responsivas */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Ajustar el padding en móviles */
+@media screen and (max-width: 768px) {
+    .section-container {
+        padding: 1rem;
+        margin: 2rem auto;
+    }
+
+    #main-container {
+        padding: 1rem;
+    }
 }

@@ -1,36 +1,61 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener("DOMContentLoaded", async function() {
+    // Esperar a que el header se cargue
+    await waitForElement('#menu-open');
+    
     const menuOpen = document.getElementById('menu-open');
     const closeMenu = document.querySelector('.close-menu');
     const fullscreenMenu = document.querySelector('.fullscreen-menu');
     
-    menuOpen.addEventListener('click', () => {
-        fullscreenMenu.classList.add('active');
-    });
-    
-    closeMenu.addEventListener('click', () => {
-        fullscreenMenu.classList.remove('active');
-    });
-    
-    // Navegación suave sin modificar URL
-    document.querySelectorAll('.menu-content a').forEach(link => {
-        link.addEventListener('click', (e) => {
-            e.preventDefault(); // Previene la navegación por defecto
-            const targetId = link.getAttribute('href');
-            const targetSection = document.querySelector(targetId);
-            
-            if (targetSection) {
-                fullscreenMenu.classList.remove('active');
-                targetSection.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
+    if (menuOpen && closeMenu && fullscreenMenu) {
+        menuOpen.addEventListener('click', () => {
+            console.log('Menu clicked'); // Para debugging
+            fullscreenMenu.classList.add('active');
+        });
+        
+        closeMenu.addEventListener('click', () => {
+            console.log('Close clicked'); // Para debugging
+            fullscreenMenu.classList.remove('active');
+        });
+        
+        // Navegación suave
+        document.querySelectorAll('.menu-content a').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = link.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
                 
-                // No modificamos la URL
-                history.pushState('', document.title, window.location.pathname);
+                if (targetSection) {
+                    fullscreenMenu.classList.remove('active');
+                    targetSection.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    }
+});
+
+// Función auxiliar para esperar a que un elemento exista
+function waitForElement(selector) {
+    return new Promise(resolve => {
+        if (document.querySelector(selector)) {
+            return resolve(document.querySelector(selector));
+        }
+
+        const observer = new MutationObserver(mutations => {
+            if (document.querySelector(selector)) {
+                observer.disconnect();
+                resolve(document.querySelector(selector));
             }
         });
+
+        observer.observe(document.body, {
+            childList: true,
+            subtree: true
+        });
     });
-});
+}
 
 // Observador de intersección para resaltar enlaces del menú
 const observerOptions = {
@@ -53,8 +78,9 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-// Observar todas las secciones
-document.addEventListener('DOMContentLoaded', () => {
+// Observar todas las secciones después de que el DOM esté cargado
+document.addEventListener('DOMContentLoaded', async () => {
+    await waitForElement('#about-container');
     const sections = document.querySelectorAll('#about-container, #projects-container, #skills-container, #certifications-container');
     sections.forEach(section => observer.observe(section));
 });

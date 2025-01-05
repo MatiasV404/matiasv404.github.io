@@ -3,15 +3,20 @@ footer {
     font-family: "Julius Sans One", serif;
     padding: 2rem 0;
     color: white;
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
 }
 
 .footer-content {
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
     padding: 2rem;
+    box-sizing: border-box;
 }
 
 .contact-me, .social-medias {
