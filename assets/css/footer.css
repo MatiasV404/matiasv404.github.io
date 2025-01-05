@@ -1,27 +1,109 @@
 footer {
-  background-color: #454545;
-  font-family: "Poiret One", serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 1.5rem;
-  color: white;
-  text-align: center;
+    background-color: #454545;
+    font-family: "Julius Sans One", serif;
+    padding: 2rem 0;
+    color: white;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.contact-me, .social-medias {
+    text-align: center;
+}
+
+.contact-me span, .social-medias span {
+    display: block;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-family: "Julius Sans One", serif;
+}
+
+.contact-me p {
+    font-family: "Poiret One", serif;
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.social-media p, .social-media a {
+    font-family: "Poiret One", serif;
+    font-size: 1.2rem;
+    margin: 0;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+    color: #888;
+}
+
+.social-media img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+}
+
+.social-media img:hover {
+    transform: scale(1.1);
 }
 
 .copyright {
-    font-size: 1rem;
+    text-align: center;
+    padding: 1rem 0;
+    font-family: "Poiret One", serif;
+    font-size: 0.9rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 2rem;
 }
 
-.footer-content,
-.social-media {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    padding: 1rem 1rem;
+/* Responsive */
+@media screen and (max-width: 768px) {
+    footer {
+        padding: 1.5rem 0;
+    }
+
+    .footer-content {
+        padding: 1rem;
+        gap: 1.5rem;
+    }
+
+    .contact-me span, .social-medias span {
+        font-size: 1.3rem;
+    }
+
+    .contact-me p, .social-media p, .social-media a {
+        font-size: 1.1rem;
+    }
+
+    .social-media {
+        gap: 1rem;
+    }
+
+    .social-media img {
+        width: 20px;
+        height: 20px;
+    }
 }
 
-.social-media {
-    flex-wrap: nowrap;
+/* Animaciones */
+.contact-me, .social-medias {
+    transition: transform 0.3s ease;
+}
+
+.contact-me:hover, .social-medias:hover {
+    transform: translateY(-5px);
 }

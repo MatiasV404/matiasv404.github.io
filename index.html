@@ -37,11 +37,118 @@
             rel="stylesheet"
             integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
             crossorigin="anonymous">
+
+        <!-- AOS -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     </head>
     <body>
         <div id="header-container"></div>
-        <main id="main-container"></main>
-        
+        <main id="main-container">
+            <!-- About Section -->
+            <section id="about-section" data-aos="fade-up">
+                <div id="about-container">
+                    <h2 class="section-title">About Me</h2>
+                    <div class="about-content">
+                        <div class="profile-image-container" data-aos="fade-right">
+                            <img src="assets/images/mv-photo.jpg" alt="Matías Véliz Igor" class="profile-image">
+                        </div>
+                        <div class="about-text" data-aos="fade-left">
+                            <p>I am a passionate software developer with a strong commitment to delivering high-quality solutions. My work combines creativity, problem-solving skills, and a focus on detail to tackle challenges in innovative ways.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects Section -->
+            <section id="projects-section" data-aos="fade-up">
+                <div id="projects-container" class="section-container">
+                    <h2 class="section-title" data-aos="fade-down">Projects</h2>
+                    <div class="projects-grid">
+                        <div class="project-card" data-aos="fade-up">
+                            <h3>FitPlan Pro</h3>
+                            <p>A mobile app designed to simplify product management by offering features like user registration, login, and real-time tracking of profits. Users can easily add, edit, or remove products while monitoring their business growth.</p>
+                            <div class="technologies">
+                                <span class="tech-tag">Ionic</span>
+                                <span class="tech-tag">Angular</span>
+                                <span class="tech-tag">Firebase</span>
+                            </div>
+                            <p class="achievement"><strong>Key Achievement:</strong> Enhanced user experience through an intuitive interface and streamlined workflows.</p>
+                        </div>
+                        <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                            <h3>Sistema de alarma de incendios inteligente (S.A.I.I)</h3>
+                            <p>A cutting-edge system under development that uses smoke and temperature sensors to detect fires and provide real-time notifications. The project integrates IoT devices to ensure efficient and timely responses to emergencies.</p>
+                            <div class="technologies">
+                                <span class="tech-tag">Raspberry Pi 3</span>
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">MongoDB</span>
+                            </div>
+                            <p class="achievement"><strong>Key Achievement:</strong> Advanced sensor integration and real-time alert mechanisms.</p>
+                        </div>
+                        <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                            <h3>GalaxyMusic</h3>
+                            <p>An e-commerce web application that incorporates a shopping cart, product integration through APIs, and advanced data analysis using neural networks to predict sales trends.</p>
+                            <div class="technologies">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Django</span>
+                                <span class="tech-tag">Firebase</span>
+                                <span class="tech-tag">PostgreSQL</span>
+                            </div>
+                            <p class="achievement"><strong>Key Achievement:</strong> Improved decision-making with predictive analytics and seamless database integration.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Skills Section -->
+            <section id="skills-section" data-aos="fade-up">
+                <div id="skills-container" class="section-container">
+                    <h2 class="section-title" data-aos="fade-down">Skills</h2>
+                    <div class="skills-grid">
+                        <div class="skill-card" data-aos="zoom-in">
+                            <h3>Discipline and Responsibility</h3>
+                            <p>Recognized for consistently meeting deadlines and excelling academically. During the development of GalaxyMusic, I ensured timely delivery of features, balancing technical requirements with user needs.</p>
+                        </div>
+                        <div class="skill-card" data-aos="zoom-in" data-aos-delay="100">
+                            <h3>Leadership and Teamwork</h3>
+                            <p>Having led every academic project since the start of my studies, I foster a collaborative and productive environment. For instance, in the Smart Fire Alarm System (S.A.I.I), I coordinated the team to integrate hardware and software components seamlessly.</p>
+                        </div>
+                        <div class="skill-card" data-aos="zoom-in" data-aos-delay="200">
+                            <h3>Continuous Learning and Motivation</h3>
+                            <p>I am always eager to expand my knowledge and enhance my skills. This mindset drove the implementation of neural networks in GalaxyMusic, showcasing a proactive approach to solving complex problems.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Certifications Section -->
+            <section id="certifications-section" data-aos="fade-up">
+                <div id="certifications-container" class="section-container">
+                    <h2 class="section-title" data-aos="fade-down">Certifications</h2>
+                    <div class="certifications-content">
+                        <div class="language-cert" data-aos="fade-right">
+                            <h3>English Proficiency</h3>
+                            <p>Intermediate-Advanced level</p>
+                        </div>
+                        <div class="technical-cert" data-aos="fade-left">
+                            <h3>Technical Certifications</h3>
+                            <ul>
+                                <li>Data Model Analysis and Development</li>
+                                <li>IT Requirements Analysis and Planning</li>
+                                <li>Software Programming</li>
+                                <li>Software Quality Assurance</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <div id="footer-container"></div>
+
+        <!-- Scripts -->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
         <script src="assets/js/main.js" defer></script>
         <script src="assets/js/menu.js" defer></script>
     </body>
