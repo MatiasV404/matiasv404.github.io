@@ -443,7 +443,7 @@ img {
 
 /* Efectos hover */
 .tech-icon-wrapper:hover {
-    transform: translateY(-5px);
+    transform: translateY(-16px);
 }
 
 .tech-icon-wrapper:hover .tech-name {
