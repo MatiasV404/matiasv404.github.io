@@ -229,13 +229,57 @@ body {
   transform: translateY(-5px);
 }
 
+.technologies {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
 .tech-tag {
   display: inline-block;
   padding: 0.3rem 0.8rem;
   margin: 0.3rem;
-  background-color: #f0f0f0;
   border-radius: 15px;
   font-size: 0.9rem;
+  color: white;
+  font-weight: 500;
+}
+
+/* Colores específicos para cada tecnología */
+.tech-tag[data-tech="Ionic"] {
+  background-color: #3880FF;
+}
+
+.tech-tag[data-tech="Angular"] {
+  background-color: #DD0031;
+}
+
+.tech-tag[data-tech="Firebase"] {
+  background-color: #FFCA28;
+  color: #333;
+}
+
+.tech-tag[data-tech="Python"] {
+  background-color: #3776AB;
+}
+
+.tech-tag[data-tech="MongoDB"] {
+  background-color: #47A248;
+}
+
+.tech-tag[data-tech="Django"] {
+  background-color: #092E20;
+}
+
+.tech-tag[data-tech="PostgreSQL"] {
+  background-color: #336791;
+}
+
+.tech-tag[data-tech="Raspberry Pi"] {
+  background-color: #C51A4A;
 }
 
 /* Estilos para Skills */
@@ -335,5 +379,87 @@ img {
 
     #main-container {
         padding: 1rem;
+    }
+}
+
+/* Estilos para la sección de tecnologías */
+.technologies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.tech-category {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.tech-category h3 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #333;
+    font-size: 1.5rem;
+}
+
+.tech-icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-evenly;
+}
+
+.tech-icon-wrapper {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.tech-icon-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.tech-name {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background: #333;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+/* Efectos hover */
+.tech-icon-wrapper:hover {
+    transform: translateY(-5px);
+}
+
+.tech-icon-wrapper:hover .tech-name {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .technologies-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tech-icon-wrapper {
+        width: 50px;
+        height: 50px;
     }
 }
